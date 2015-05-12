@@ -8,5 +8,8 @@ $ npm install
 - Create user in Mongodb 
 
 - start like $ ENV=development JWT_SECRET=bar CONN=mongodb://localhost/my_world nodemon server.js
+- or start like $ gulp dev:server
 - 
 Preview here : https://ce-9053-final-project-mbastien.c9.io/
+
+ce_9053_user:bqWAF0Z3

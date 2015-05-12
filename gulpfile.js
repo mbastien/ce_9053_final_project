@@ -74,7 +74,7 @@ gulp.task("prod:server", ["watch:js"], function(){
         env: {
             ENV: "production",
             CONN: "mongodb://localhost/my_world",
-            JWT_SECRET: "bar"
+            JWT_SECRET: "Foo"
         }
     });
 });
