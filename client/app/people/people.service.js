@@ -41,6 +41,7 @@ angular.module("myWorld").factory("PeopleSvc", function($q, $http, AuthSvc ){
       return dfd.promise;
     },
     updatePerson: function(person){
+      //console.log("person : " + person.name + " active : " + person.active ); // for debugging
       var dfd = $q.defer();  
       $http.post("/api/people/" + person._id + "/" + AuthSvc.getToken(), person).then(
         function(result){
