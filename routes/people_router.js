@@ -5,7 +5,7 @@ var Person = require("../models/models").Person;
 var peopleRouter = express.Router();
 
 peopleRouter.get("/", function(req, res){
-  Person.find({}).sort("name").exec(function(err, people){
+  Person.find({}).sort({active:-1}).sort("name").exec(function(err, people){
     res.send(people);
   }); 
 });
