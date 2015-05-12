@@ -79,3 +79,14 @@ gulp.task("prod:server", ["watch:js"], function(){
     });
 });
 
+gulp.task("prod:heroku", ["watch:js"], function(){
+    nodemon({
+        script: "server.js",
+        ext: "js",
+        // ENV, CONN, and JWT_SECRET all stored on Heroku
+        env: {
+            
+        }
+    });
+});
+
