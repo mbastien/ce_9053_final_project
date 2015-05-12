@@ -33,7 +33,7 @@ angular.module("myWorld").controller("PeopleCtrl", function($scope, $location, N
   function activate(){
     $scope.inserting = {
       active: true,
-      color: 'blue',
+      color: 'blue'
     };
     PeopleSvc.getPeople().then(function(people){
       $scope.people = people;
