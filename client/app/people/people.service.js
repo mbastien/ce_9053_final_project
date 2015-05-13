@@ -31,7 +31,7 @@ angular.module("myWorld").factory("PeopleSvc", function($q, $http, AuthSvc ){
       var dfd = $q.defer();  
       $http.post("/api/people/" + AuthSvc.getToken(), person).then(
         function(result){
-          console.log(result);
+          //console.log(result);
           dfd.resolve(result.data);
         },
         function(result){

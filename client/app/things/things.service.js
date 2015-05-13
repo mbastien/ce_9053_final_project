@@ -31,7 +31,7 @@ angular.module("myWorld").factory("ThingsSvc", function($q, $http, AuthSvc ){
       var dfd = $q.defer();  
       $http.post("/api/things/" + AuthSvc.getToken(), thing).then(
         function(result){
-          console.log(result);
+          //console.log(result);
           dfd.resolve(result.data);
         },
         function(result){
@@ -41,7 +41,7 @@ angular.module("myWorld").factory("ThingsSvc", function($q, $http, AuthSvc ){
       return dfd.promise;
     },
     updateThing: function(thing){
-      console.log("thing : " + thing.name + " active : " + thing.active ); // for debugging
+      // console.log("thing : " + thing.name + " active : " + thing.active ); // for debugging
       var dfd = $q.defer();  
       $http.post("/api/things/" + thing._id + "/" + AuthSvc.getToken(), thing).then(
         function(result){
